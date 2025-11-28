@@ -1,203 +1,105 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Swetha | Mechanical Engineer</title>
+<section id="projects">
+  <h2 class="fade-in">Selected Projects</h2>
+  <p class="section-subtitle fade-in">
+    I engineer resilient robotic and mechanical systems for lunar exploration — from deployable power stations
+    to soft robotics, mission design, and regolith excavation technologies.
+  </p>
 
-  <!-- LINK TO YOUR SEPARATE CSS FILE -->
-  <link rel="stylesheet" href="style.css" />
-</head>
-
-<body>
-  <!-- ===== Header with logo ===== -->
-  <header>
-    <div class="logo">
-      <img src="img/logo.png" alt="Swetha logo" />
-      <span class="logo-text">Swetha Prakash</span>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#intro">Intro</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#experience">Experience</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- ===== Hero section with background video ===== -->
-  <section class="hero" id="intro">
-    <video
-      class="hero-video"
-      src="https://swetha1047.github.io/swetha-cv/video/hero.mp4"
-      autoplay
-      muted
-      loop
-      playsinline
-      poster="img/hero-fallback.jpg"
-    ></video>
-
-    <div class="hero-overlay"></div>
-
-    <div class="hero-content fade-in">
-      <div class="hero-kicker">Mechanical Engineer · Robotics · Space Systems</div>
-      <h1>
-        Building and designing for the<br />
-        <span>next generation of exploration.</span>
-      </h1>
-      <p class="hero-subtitle">
-        From lunar terrain vehicles and soft robotics to regolith tools and thermal systems,
-        I design and build mechanisms that survive the harshest environments.
+  <!-- ---------- PROJECT 1 ---------- -->
+  <div class="grid-2 project-block">
+    <div class="card fade-in">
+      <h3>Lunar Terrain Vehicle Solar Power Station</h3>
+      <p>
+        Redesigned and brought a deployable solar power station from early concept
+        to field-ready hardware including CAD redesigns, fold-out mechanisms, and
+        a complete electronics upgrade.
       </p>
-
-      <div class="hero-actions">
-        <button class="btn-primary" onclick="document.querySelector('#projects').scrollIntoView({behavior:'smooth'})">
-          View Selected Work
-        </button>
-        <button class="btn-outline" onclick="document.querySelector('#experience').scrollIntoView({behavior:'smooth'})">
-          NASA Experience
-        </button>
-      </div>
-
-      <div class="hero-meta">
-        <span>NASA Intern</span>
-        <span>Lunar Robotics</span>
-        <span>UT Dallas · ME</span>
+      <div class="card-tags">
+        <span class="tag">NASA JSC</span>
+        <span class="tag">CAD</span>
+        <span class="tag">Power Systems</span>
       </div>
     </div>
-  </section>
 
-  <!-- ===== Projects Section ===== -->
- <main>
-  <section id="projects">
-    <h2 class="fade-in">Selected Projects</h2>
-    <p class="section-subtitle fade-in">
-      A snapshot of systems I've designed and built: lunar power infrastructure, subsurface tools,
-      and soft robotic explorers tailored for extreme environments.
-    </p>
-
-    <div class="grid-2">
-      <!-- LEFT: Project cards -->
-      <div class="projects-list">
-        <div class="card fade-in">
-          <h3>Lunar Terrain Vehicle Solar Power Station</h3>
-          <p>
-            Redesigned and brought a deployable solar power station from early concept
-            to field-ready hardware. Full CAD overhaul, fold-out mechanism iterations,
-            and complete electronics retrofit.
-          </p>
-          <div class="card-tags">
-            <span class="tag">NASA JSC</span>
-            <span class="tag">CAD</span>
-            <span class="tag">Power Systems</span>
-            <span class="tag">Field Hardware</span>
-          </div>
-        </div>
-
-        <div class="card fade-in">
-          <h3>NASA L'SPACE MCA Twin Rover Mission</h3>
-          <p>
-            Developed CAD layouts, payload interfaces, and science-objective mapping
-            for a twin-rover mission concept targeting lunar lava tubes.
-          </p>
-          <div class="card-tags">
-            <span class="tag">Lunar Mission</span>
-            <span class="tag">Rover Design</span>
-            <span class="tag">PDR Writing</span>
-            <span class="tag">Science Analysis</span>
-          </div>
-        </div>
-
-        <div class="card fade-in">
-          <h3>NASA NPWEE SELENE Soft Robotic Rover</h3>
-          <p>
-            Secured $10,000 in NASA funding and led the cross-functional development of a soft-robotics rover,
-            integrating CAD, thermal modeling, electronics, and autonomy. Applied advanced thermal systems engineering
-            to meet –40°C to 70°C lunar environments while serving as Project Lead and Limb Design Lead.
-          </p>
-          <div class="card-tags">
-            <span class="tag">Soft Robotics</span>
-            <span class="tag">Thermal Modeling</span>
-            <span class="tag">CAD</span>
-            <span class="tag">Lead Developer</span>
-          </div>
-        </div>
-
-        <div class="card fade-in">
-          <h3>NASA Lunabotics</h3>
-          <p>
-            Designed and fabricated a 1.5 kg regolith depositor with an actuated door,
-            performed FEA validation, 3D-printed optimized wheels, and contributed to SRR, PDR,
-            and Proof of Life deliverables.
-          </p>
-          <div class="card-tags">
-            <span class="tag">NASA KSC</span>
-            <span class="tag">FEA</span>
-            <span class="tag">Regolith</span>
-            <span class="tag">Teamwork</span>
-          </div>
-        </div>
+    <div class="image-frame fade-in">
+      <div class="slideshow slideshow-1">
+        <img src="img/SolarOpen.jpg" class="slide active">
+        <img src="img/SolarFolded.jpg" class="slide">
+        <img src="img/Wire.jpg" class="slide">
+        <img src="img/WireDraw.jpg" class="slide">
       </div>
-
-      <!-- RIGHT: Auto-slideshow -->
-      <div class="image-frame fade-in">
-        <div class="project-slideshow">
-          <div class="project-slide active">
-            <img src="https://swetha1047.github.io/swetha-cv/img/SolarOpen.jpg" />
-          </div>
-          <div class="project-slide">
-            <img src="https://swetha1047.github.io/swetha-cv/img/SolarFolded.jpg" />
-          </div>
-          <div class="project-slide">
-            <img src="https://swetha1047.github.io/swetha-cv/img/Dora.jpg" />
-          </div>
-          <div class="project-slide">
-            <img src="https://swetha1047.github.io/swetha-cv/img/Boots.jpg" />
-          </div>
-          <div class="project-slide">
-            <img src="https://swetha1047.github.io/swetha-cv/Ex1.jpg" />
-          </div>
-          <div class="project-slide">
-            <img src="https://swetha1047.github.io/swetha-cv/Ex2.jpg" />
-          </div>
-        </div>
-      </div>
-
     </div>
-  </section>
-</main>
+  </div>
 
-  <footer>
-    © 2025 Swetha Prakash · Built for the next mission 🚀
-  </footer>
+  <!-- ---------- PROJECT 2 ---------- -->
+  <div class="grid-2 project-block">
+    <div class="card fade-in">
+      <h3>NASA L'SPACE MCA Twin Rover Mission</h3>
+      <p>
+        Core engineer contributing CAD layouts, payload design, and science-objective mapping
+        for a dual-rover mission concept exploring lunar lava tubes.
+      </p>
+      <div class="card-tags">
+        <span class="tag">Mission Design</span>
+        <span class="tag">CAD</span>
+        <span class="tag">PDR</span>
+      </div>
+    </div>
 
-  <!-- ===== Fade-in Behavior ===== -->
-  <script>
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.15 }
-    );
-    document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
-  </script>
+    <div class="image-frame fade-in">
+      <div class="slideshow slideshow-2">
+        <img src="img/Dora.jpg" class="slide active">
+        <img src="img/DoraConOp.jpg" class="slide">
+        <img src="img/Boots.jpg" class="slide">
+        <img src="img/BootsConOp.jpg" class="slide">
+      </div>
+    </div>
+  </div>
 
-  <!-- ===== Slideshow Logic ===== -->
-  <script>
-    const slides = document.querySelectorAll(".project-slide");
-    let index = 0;
+  <!-- ---------- PROJECT 3 ---------- -->
+  <div class="grid-2 project-block">
+    <div class="card fade-in">
+      <h3>NASA NPWEE SELENE Soft Robotic Rover</h3>
+      <p>
+        Secured $10,000 NASA funding and led the cross-functional design of a soft-robotic lunar rover,
+        integrating CAD, thermal simulations, electronics, autonomy, and actuator development.
+      </p>
+      <div class="card-tags">
+        <span class="tag">Soft Robotics</span>
+        <span class="tag">Thermal Modeling</span>
+        <span class="tag">Lead Developer</span>
+      </div>
+    </div>
 
-    setInterval(() => {
-      slides[index].classList.remove("active");
-      index = (index + 1) % slides.length;
-      slides[index].classList.add("active");
-    }, 4000);
-  </script>
+    <div class="image-frame fade-in">
+      <div class="slideshow slideshow-3">
+        <img src="img/Soft.jpg" class="slide active">
+        <!-- Add more SELENE images later -->
+      </div>
+    </div>
+  </div>
 
-</body>
-</html>
+  <!-- ---------- PROJECT 4 ---------- -->
+  <div class="grid-2 project-block">
+    <div class="card fade-in">
+      <h3>NASA Lunabotics</h3>
+      <p>
+        Designed a 1.5 kg regolith depositor, validated with FEA, and 3D-printed optimized rover wheels.
+        Contributed to SRR, PDR, and Proof-of-Life milestone submissions.
+      </p>
+      <div class="card-tags">
+        <span class="tag">NASA KSC</span>
+        <span class="tag">FEA</span>
+        <span class="tag">Regolith</span>
+      </div>
+    </div>
+
+    <div class="image-frame fade-in">
+      <div class="slideshow slideshow-4">
+        <img src="img/Ex1.jpg" class="slide active">
+        <img src="img/Ex2.jpg" class="slide">
+      </div>
+    </div>
+  </div>
+
+</section>
