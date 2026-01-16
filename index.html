@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Swetha | Mechanical Engineer</title>
 
-  <!-- LINK TO YOUR SEPARATE CSS FILE -->
+  
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <!-- ===== Header with logo ===== -->
+ 
   <header>
     <div class="logo">
       <img src="img/logo.png" alt="Swetha logo" />
@@ -26,7 +26,7 @@
     </nav>
   </header>
 
-  <!-- ===== Hero section with background video ===== -->
+  
   <section class="hero" id="intro">
     <video
       class="hero-video"
@@ -66,7 +66,7 @@
 
   <div class="projects-grid">
 
-    <!-- ========== CARD 1 ========== -->
+  
     <div class="card project-card fade-in">
       <div class="card-slideshow">
         <img src="https://swetha1047.github.io/swetha-cv/img/solar open.jpg" class="slide active" alt="Solar Station Open">
@@ -86,7 +86,7 @@
       </div>
     </div>
 
-    <!-- ========== CARD 2 ========== -->
+
     <div class="card project-card fade-in">
       <div class="card-slideshow">
         <img src="https://swetha1047.github.io/swetha-cv/img/dorra.jpg" class="slide active" alt="DORA Rover">
@@ -111,12 +111,12 @@
       </div>
     </div>
 
-    <!-- ========== CARD 3 ========== -->
+  
     <div class="card project-card fade-in">
       <div class="card-slideshow">
         <img src="https://swetha1047.github.io/swetha-cv/img/selene.jpg" class="slide active" alt="SELENE Rover">
         <img src="https://swetha1047.github.io/swetha-cv/img/selene2.jpg" class="slide" alt="SELENE 2 Rover">
-        <!-- Add more SELENE images here later if you upload them -->
+     
       </div>
       <div class="card-body">
         <h3>NASA NPWEE SELENE Soft Robotic Rover</h3>
@@ -133,7 +133,7 @@
       </div>
     </div>
 
-    <!-- ========== CARD 4 ========== -->
+ 
     <div class="card project-card fade-in">
       <div class="card-slideshow">
         <img src="https://swetha1047.github.io/swetha-cv/Ex1.jpg" class="slide active" alt="Lunabotics Hardware 1">
@@ -183,7 +183,7 @@
     © 2025 Swetha Prakash · Built for the next mission 🚀
   </footer>
 
-  <!-- ===== Fade-in Behavior ===== -->
+ 
   <script>
     const observer = new IntersectionObserver(
       entries => {
@@ -199,19 +199,19 @@
     document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
   </script>
 
-    <!-- ===== Slideshow Logic (fixed) ===== -->
+
   <script>
-    // run a separate slideshow inside each .card-slideshow
+    
     document.querySelectorAll(".card-slideshow").forEach(slideshow => {
       const slides = slideshow.querySelectorAll(".slide");
-      if (slides.length <= 1) return; // nothing to animate if only one slide
+      if (slides.length <= 1) return; 
 
       let index = 0;
       setInterval(() => {
         slides[index].classList.remove("active");
         index = (index + 1) % slides.length;
         slides[index].classList.add("active");
-      }, 2000); // 2 seconds per slide
+      }, 2000); 
     });
   </script>
 
