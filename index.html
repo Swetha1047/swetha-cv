@@ -60,7 +60,7 @@
     </div>
   </section>
 
-  <!-- ===== Projects Section ===== -->
+
  <section id="projects">
   <h2 class="fade-in">Selected Projects</h2>
 
@@ -75,12 +75,15 @@
       <div class="card-body">
         <h3>Lunar Terrain Vehicle Solar Power Station</h3>
         <p>
-          Redesigned and brought a deployable solar power station from early concept to field-ready hardware,
-          including CAD overhaul, fold-out mechanism iterations, and a full electronics retrofit.
+          Redesigned and fabricated a lunar solar power station, upgrading CAD models, prototyping hardware, and retrofitting power 
+          electronics to achieve a 28% increase in energy capacity through mission-relevant testing. Refurbished SEV wiring and planetary 
+          transmissions by replacing faulty components and manufacturing custom parts, restoring operational reliability in direct support
+          of Artemis mission objectives.
         </p>
         <div class="card-tags">
-          <span class="tag">NASA JSC</span>
-          <span class="tag">CAD</span>
+          <span class="tag">Documentation</span>
+          <span class="tag">Prototyping</span>
+          <span class="tag">Electrical Wiring</span>
           <span class="tag">Power Systems</span>
         </div>
       </div>
@@ -214,6 +217,23 @@
       }, 2000); 
     });
   </script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const video = document.querySelector(".hero-video");
+    if (!video) return;
+
+    video.muted = true;
+    video.playsInline = true;
+
+    const playPromise = video.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        // Fallback: show poster image instead
+        video.style.display = "none";
+      });
+    }
+  });
+</script>
 
 
 </body>
