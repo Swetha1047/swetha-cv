@@ -500,3 +500,13 @@ footer {
     height: 180px;
   }
 }
+/* ----- Override global section width for the hero (Intro) ----- */
+section.hero {
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0 3rem;        /* keep your hero side padding */
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
