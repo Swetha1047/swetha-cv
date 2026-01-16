@@ -230,11 +230,10 @@
     function playIfIntro() {
       const onIntro = (location.hash === "#intro" || location.hash === "");
       if (onIntro) {
-        // force attempt to play (some browsers need this after navigation)
+        // force attempt to play 
         const p = video.play();
         if (p && typeof p.catch === "function") p.catch(() => {});
       } else {
-        // optional: pause when leaving intro
         video.pause();
       }
     }
@@ -242,13 +241,13 @@
     // Run on initial load
     playIfIntro();
 
-    // Run when clicking nav links (#intro / #projects)
+    // Run when clicking #intro / #projects
     window.addEventListener("hashchange", playIfIntro);
 
     // If the video loads a bit later, try again
     video.addEventListener("canplay", playIfIntro);
 
-    // Also try after first user interaction (helps Safari/iOS)
+    // Also try after first user interaction 
     document.addEventListener("click", playIfIntro, { once: true });
   });
 </script>
