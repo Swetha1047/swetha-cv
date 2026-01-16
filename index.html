@@ -223,15 +223,7 @@
     const video = document.querySelector(".hero-video");
     if (!video) return;
 
-    video.muted = true;
-    video.playsInline = true;
-
-    const playPromise = video.play();
-    if (playPromise !== undefined) {
-      playPromise.catch(() => {
-        // Fallback: show poster image instead
-        video.style.display = "none";
-      });
+  
     }
   });
 </script>
