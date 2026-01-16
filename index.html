@@ -28,15 +28,18 @@
 
   
   <section class="hero" id="intro">
-    <video
-      class="hero-video"
-      src="https://swetha1047.github.io/swetha-cv/video/hero.mp4"
-      autoplay
-      muted
-      loop
-      playsinline
-      poster="img/hero-fallback.jpg"
-    ></video>
+  <video
+  id="heroVideo"
+  class="hero-video"
+  src="https://swetha1047.github.io/swetha-cv/video/hero.mp4"
+  autoplay
+  muted
+  loop
+  playsinline
+  preload="auto"
+  poster="img/hero-fallback.jpg"
+></video>
+
 
     <div class="hero-overlay"></div>
 
@@ -221,14 +224,34 @@
   </script>
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    const video = document.querySelector(".hero-video");
+    const video = document.getElementById("heroVideo");
     if (!video) return;
 
-  
+    function playIfIntro() {
+      const onIntro = (location.hash === "#intro" || location.hash === "");
+      if (onIntro) {
+        // force attempt to play (some browsers need this after navigation)
+        const p = video.play();
+        if (p && typeof p.catch === "function") p.catch(() => {});
+      } else {
+        // optional: pause when leaving intro
+        video.pause();
+      }
     }
+
+    // Run on initial load
+    playIfIntro();
+
+    // Run when clicking nav links (#intro / #projects)
+    window.addEventListener("hashchange", playIfIntro);
+
+    // If the video loads a bit later, try again
+    video.addEventListener("canplay", playIfIntro);
+
+    // Also try after first user interaction (helps Safari/iOS)
+    document.addEventListener("click", playIfIntro, { once: true });
   });
 </script>
-
 
 </body>
 </html>
