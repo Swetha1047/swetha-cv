@@ -5,10 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Swetha | Mechanical Engineer</title>
 
+  <!-- LINK TO YOUR SEPARATE CSS FILE -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+  <!-- ===== Header with logo ===== -->
   <header>
     <div class="logo">
       <img src="img/logo.png" alt="Swetha logo" />
@@ -24,7 +26,7 @@
     </nav>
   </header>
 
-
+  <!-- ===== Hero section with background video ===== -->
   <section class="hero" id="intro">
     <video
       class="hero-video"
@@ -58,12 +60,13 @@
     </div>
   </section>
 
-  
+  <!-- ===== Projects Section ===== -->
  <section id="projects">
   <h2 class="fade-in">Selected Projects</h2>
 
   <div class="projects-grid">
 
+    <!-- ========== CARD 1 ========== -->
     <div class="card project-card fade-in">
       <div class="card-slideshow">
         <img src="https://swetha1047.github.io/swetha-cv/img/solar open.jpg" class="slide active" alt="Solar Station Open">
@@ -83,7 +86,7 @@
       </div>
     </div>
 
-
+    <!-- ========== CARD 2 ========== -->
     <div class="card project-card fade-in">
       <div class="card-slideshow">
         <img src="https://swetha1047.github.io/swetha-cv/img/dorra.jpg" class="slide active" alt="DORA Rover">
@@ -94,18 +97,21 @@
       <div class="card-body">
         <h3>NASA L'SPACE MCA Twin Rover Mission</h3>
         <p>
-          Core engineer for a twin-rover lunar lava tube exploration concept, developing CAD layouts,
+          Core engineer/scientist for a twin-rover lunar lava tube exploration mission concept, developing CAD layouts,
           payload interfaces, and science objective mapping for mission PDR.
         </p>
         <div class="card-tags">
           <span class="tag">Mission Design</span>
-          <span class="tag">Rover CAD</span>
-          <span class="tag">PDR</span>
+          <span class="tag">Risk Management</span>
+          <span class="tag">Instrument Calibration</span>
+          <span class="tag">TRL</span>
+          <span class="tag">Science Objectives</span>
+          <span class="tag">NX Siemens</span>
         </div>
       </div>
     </div>
 
- 
+    <!-- ========== CARD 3 ========== -->
     <div class="card project-card fade-in">
       <div class="card-slideshow">
         <img src="https://swetha1047.github.io/swetha-cv/img/selene.jpg" class="slide active" alt="SELENE Rover">
@@ -115,18 +121,19 @@
       <div class="card-body">
         <h3>NASA NPWEE SELENE Soft Robotic Rover</h3>
         <p>
-          Secured $10,000 in NASA funding and led development of a soft-robotic lunar rover,
-          integrating CAD, thermal modeling, electronics, autonomy, and soft-actuator design.
+          Secured $10,000 in NASA funding as a lead developer of a soft-robotics lunar exploration rover,
+          integrating advanced CAD design, thermal modeling, electronics, autonomy, and soft-actuator design.
         </p>
         <div class="card-tags">
           <span class="tag">Soft Robotics</span>
-          <span class="tag">Thermal Systems</span>
+          <span class="tag">Thermal Regulation</span>
           <span class="tag">Lead Developer</span>
+          <span class="tag">Proposal Writing</span>
         </div>
       </div>
     </div>
 
-  
+    <!-- ========== CARD 4 ========== -->
     <div class="card project-card fade-in">
       <div class="card-slideshow">
         <img src="https://swetha1047.github.io/swetha-cv/Ex1.jpg" class="slide active" alt="Lunabotics Hardware 1">
@@ -135,19 +142,39 @@
       <div class="card-body">
         <h3>NASA Micro G Next</h3>
         <p>
-          Designed and prototyped a handheld coring tool for Artemis regolith sampling, 
+          Designed and prototyped a handheld coring tool for Artemis regolith sampling tasks, 
           leading CAD modeling, mechanical design, and prototype validation. 
           Authored a full NASA-style proposal covering design, safety, and manufacturing, 
           and supported STEM outreach through CAD workshops and technical presentations.
         </p>
         <div class="card-tags">
-          <span class="tag">NASA KSC</span>
-          <span class="tag">FEA</span>
-          <span class="tag">Regolith</span>
+          <span class="tag">Astronaut Tool Design</span>
+          <span class="tag">EVA</span>
+          <span class="tag">Outreach</span>
+          <span class="tag">Fusion</span>
         </div>
       </div>
     </div>
-
+<div class="card project-card fade-in">
+      <div class="card-slideshow">
+        <img src="https://swetha1047.github.io/swetha-cv/Ex1.jpg" class="slide active" alt="Lunabotics Hardware 1">
+        <img src="https://swetha1047.github.io/swetha-cv/Ex2.jpg" class="slide" alt="Lunabotics Hardware 2">
+      </div>
+      <div class="card-body">
+        <h3>Lunabotics</h3>
+        <p>
+          Designed and fabricated a 1.5 kg regolith depositor and validated structural integrity through 
+          finite element analysis. CAD-modeled and 3D-printed lightweight rover wheels and supported system-level 
+          integration and NASA Lunabotics milestones including SRR, PDR, and Proof of Life.
+        </p>
+        <div class="card-tags">
+          <span class="tag">Rover Design</span>
+          <span class="tag">FEA</span>
+          <span class="tag">3D printing</span>
+          <span class="tag">Solidworks</span>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 </main>
@@ -156,7 +183,7 @@
     © 2025 Swetha Prakash · Built for the next mission 🚀
   </footer>
 
-
+  <!-- ===== Fade-in Behavior ===== -->
   <script>
     const observer = new IntersectionObserver(
       entries => {
@@ -172,7 +199,7 @@
     document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
   </script>
 
-  
+    <!-- ===== Slideshow Logic (fixed) ===== -->
   <script>
     // run a separate slideshow inside each .card-slideshow
     document.querySelectorAll(".card-slideshow").forEach(slideshow => {
