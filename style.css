@@ -1,9 +1,4 @@
-/* ==========================================
-   Swetha Portfolio — Responsive CSS (Clean)
-   Drop-in replacement for style.css
-   ========================================== */
 
-/* ----- Global styles ----- */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -28,14 +23,14 @@ a {
   text-decoration: none;
 }
 
-/* Media defaults */
+
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-/* IMPORTANT: do NOT force video height:auto globally */
+/* to not force vid height */
 video {
   max-width: 100%;
   display: block;
@@ -46,7 +41,7 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* ----- Header / Navbar ----- */
+/* Nav/Header */
 header {
   position: fixed;
   top: 0;
@@ -117,7 +112,7 @@ nav a:hover::after {
   width: 100%;
 }
 
-/* ----- Hero Section ----- */
+
 .hero {
   position: relative;
   min-height: 100vh;
@@ -139,10 +134,10 @@ nav a:hover::after {
 
   z-index: -2;
 
-  /* prevent odd inline video layout issues on mobile */
+  /* Vid moble layout*/
   display: block;
 
-  /* ensure it stays full height even if a browser tries to apply auto height */
+  /* browser height override */
   min-height: 100%;
 }
 
@@ -164,7 +159,7 @@ nav a:hover::after {
   line-height: 1.15;
 }
 
-/* ----- Buttons ----- */
+
 .btn-primary,
 .btn-outline {
   padding: 0.8rem 1.6rem;
@@ -188,7 +183,7 @@ nav a:hover::after {
   color: #e5e7eb;
 }
 
-/* ----- Sections ----- */
+
 main {
   background: radial-gradient(circle at top, #020617 0, #020617 40%, #010313 100%);
 }
@@ -205,7 +200,7 @@ section {
   margin-bottom: 2.5rem;
 }
 
-/* ----- Grid Layout ----- */
+
 .grid-2 {
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
@@ -213,7 +208,7 @@ section {
   align-items: center;
 }
 
-/* ----- Card Style ----- */
+
 .card {
   background: radial-gradient(circle at top left, #0f172a, #020617);
   border-radius: 1.5rem;
@@ -236,7 +231,7 @@ section {
   font-size: 0.7rem;
 }
 
-/* ----- Slideshow RIGHT SIDE (if used elsewhere) ----- */
+
 .image-frame {
   border-radius: 1.5rem;
   overflow: hidden;
@@ -268,7 +263,7 @@ section {
   opacity: 1;
 }
 
-/* ----- Fade-in animation ----- */
+
 .fade-in {
   opacity: 0;
   transform: translateY(24px);
@@ -280,7 +275,7 @@ section {
   transform: translateY(0);
 }
 
-/* ----- Footer ----- */
+
 footer {
   padding: 2.5rem 3rem;
   text-align: center;
@@ -289,7 +284,7 @@ footer {
   border-top: 1px solid rgba(31, 41, 55, 0.9);
 }
 
-/* ----- Projects grid ----- */
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -337,48 +332,43 @@ footer {
   font-size: 0.95rem;
   color: #cbd5f5;
 }
-/* Desktop-only hero video edge fade (smoother, no hard seam) */
+/* Desktop video edge fade/ smooth transition */
 @media (min-width: 1024px) {
   section.hero .hero-overlay {
     background:
-      /* edge fade */
+
       linear-gradient(
         to right,
         rgba(2, 6, 23, 0.98) 0%,
         rgba(2, 6, 23, 0.80) 10%,
         rgba(2, 6, 23, 0.25) 24%,
-        rgba(2, 6, 23, 0.10) 50%,  /* <-- not fully transparent */
+        rgba(2, 6, 23, 0.10) 50%,  
         rgba(2, 6, 23, 0.25) 76%,
         rgba(2, 6, 23, 0.80) 90%,
         rgba(2, 6, 23, 0.98) 100%
       ),
 
-      /* subtle inner vignette to hide any seam */
       radial-gradient(
         ellipse at center,
         rgba(2, 6, 23, 0.00) 40%,
         rgba(2, 6, 23, 0.25) 100%
       ),
 
-      /* your existing atmospheric gradients */
+      
       radial-gradient(circle at top left, rgba(56, 189, 248, 0.15), transparent 65%),
       radial-gradient(circle at bottom right, rgba(168, 85, 247, 0.15), transparent 65%),
       linear-gradient(to bottom, rgba(15, 23, 42, 0.35), rgba(15, 23, 42, 0.25));
   }
 
-  /* Optional: soften the gradient edge (helps a LOT on some monitors) */
+  
   section.hero .hero-overlay {
     filter: blur(0.6px);
-    transform: scale(1.02); /* prevents blur from exposing edges */
+    transform: scale(1.02); 
   }
 }
 
 
-/* ==========================================
-   Responsive
-   ========================================== */
 
-/* Tablet and down */
 @media (max-width: 900px) {
   header {
     padding: 0 1.25rem;
@@ -401,7 +391,7 @@ footer {
   }
 }
 
-/* Phone */
+/* Phone format*/
 @media (max-width: 600px) {
   header {
     height: auto;
@@ -449,7 +439,7 @@ footer {
   }
 
   .hero-content {
-    margin-top: 7.25rem; /* space for stacked header */
+    margin-top: 7.25rem; 
     max-width: 100%;
   }
 
@@ -513,12 +503,12 @@ footer {
     height: 180px;
   }
 }
-/* ----- Override global section width for the hero (Intro) ----- */
+/* Override section width for the vid */
 section.hero {
   max-width: 100%;
   width: 100%;
   margin: 0;
-  padding: 0 3rem;        /* keep your hero side padding */
+  padding: 0 3rem;       
   min-height: 100vh;
   overflow: hidden;
   position: relative;
